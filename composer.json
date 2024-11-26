@@ -1,0 +1,64 @@
+{
+  "name": "beapi/posts-lifetime",
+  "description": "Define an expiration date for posts",
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/BeAPI/posts-lifetime",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Be API",
+      "email": "technique@beapi.fr"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "composer/installers": "^1.0 || ^2.0"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "humanmade/psalm-plugin-wordpress": "^2.0",
+    "overtrue/phplint": "^3.2 || ^9.0",
+    "php-parallel-lint/php-parallel-lint": "^1.3",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "phpro/grumphp-shim": "^0.22 || ^1.10",
+    "roave/security-advisories": "dev-latest",
+    "roots/wordpress-no-content": "^6.0",
+    "squizlabs/php_codesniffer": "^3.7",
+    "vimeo/psalm": "~4.23.0",
+    "wp-cli/wp-cli": "^2.6",
+    "wp-coding-standards/wpcs": "^2.3",
+    "wp-phpunit/wp-phpunit": "^6.0",
+    "yoast/phpunit-polyfills": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Beapi\\PostsLifetime\\": "classes/"
+    }
+  },
+  "scripts": {
+    "cs": "./vendor/bin/phpcs",
+    "cb": "./vendor/bin/phpcbf",
+    "psalm": "./vendor/bin/psalm",
+    "phpunit": "phpunit"
+  },
+  "scripts-descriptions": {
+    "cs": "Run PHP CodeSniffer on codebase using custom ruleset.",
+    "cb": "Run PHP Code Beautifier and Fixer on codebase using custom ruleset.",
+    "psalm": "Run psalm on codebase using custom ruleset.",
+    "phpunit": "Run PHP unit tests."
+  },
+  "minimum-stability": "dev",
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true,
+      "phpro/grumphp-shim": true
+    },
+    "platform": {
+      "php": "8.2"
+    }
+  }
+}
