@@ -11,7 +11,7 @@ Post authors are informated when content is placed in trash.
 3 possibilities.
 
 * Take the ZIP archive proposed in the Github releases
-* Add "beapi/beapi-posts-lifetime" on composer json project file
+* Add "beapi/posts-lifetime" on composer json project file or do "composer require beapi/posts-lifetime"
 * Take this GIT repository and call "composer install" command
 
 ## Compatibility
