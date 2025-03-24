@@ -1,0 +1,90 @@
+# Copyright (C) 2025 Be API Technical team
+# This file is distributed under the same license as the Posts Lifetime plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Posts Lifetime 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/posts-lifetime\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-03-24T09:24:19+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: posts-lifetime\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#. Plugin Name of the plugin
+#: posts-lifetime.php
+msgid "Posts Lifetime"
+msgstr "Durée de vie des articles"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: posts-lifetime.php
+msgid "https://beapi.fr"
+msgstr "https://beapi.fr"
+
+#. Description of the plugin
+#: posts-lifetime.php
+msgid "Define an expiration date for posts."
+msgstr "Définir une date d'expiration pour les articles."
+
+#. Author of the plugin
+#: posts-lifetime.php
+msgid "Be API Technical team"
+msgstr "Équipe technique Be API"
+
+#: classes/Admin.php:28
+msgid "Posts Lifetime Info"
+msgstr "Informations sur la durée de vie des articles"
+
+#: classes/Admin.php:43
+msgid "Expired posts"
+msgstr "Articles expirés"
+
+#: classes/Admin.php:48
+msgid "Here are the last 10 expired posts, to be deleted within %d days after being in trash"
+msgstr "Voici les 10 derniers articles expirés, qui seront supprimés dans %d jours après avoir été mis dans la corbeille"
+
+#: classes/Admin.php:73
+msgid "No expired posts."
+msgstr "Aucun article expiré."
+
+#: classes/Admin.php:88
+msgid "Post Lifetime"
+msgstr "Durée de vie de l'article"
+
+#: classes/Admin.php:106
+msgid "Define the post expiration date:"
+msgstr "Définir la date d'expiration de l'article :"
+
+#: classes/Admin.php:163
+msgid "Trash retention period (days) for posts"
+msgstr "Période de conservation dans la corbeille (jours) pour les articles"
+
+#: classes/Cron/PostsLifetimeCron.php:134
+msgid "Your post \"%s\" has been moved to trash"
+msgstr "Votre article \"%s\" a été déplacé dans la corbeille"
+
+#. translators: 1: post title, 2: number of days before permanent deletion, 3: post edit link
+#: classes/Cron/PostsLifetimeCron.php:140
+msgid ""
+"Hello,\n"
+"\n"
+"Your post titled \"%s\" has been automatically moved to trash because its lifetime expired. It will be permanently deleted in %d days.\n"
+"\n"
+"You can review and edit your post here: %s\n"
+"\n"
+"Regards,\n"
+"Your Site Team"
+msgstr "Bonjour,\n\nVotre article intitulé \"%s\" a été automatiquement déplacé dans la corbeille car sa durée de vie a expiré. Il sera supprimé définitivement dans %d jours.\n\nVous pouvez examiner et modifier votre article ici : %s\n\nCordialement,\nL'équipe du site"

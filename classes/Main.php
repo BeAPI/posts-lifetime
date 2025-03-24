@@ -28,6 +28,6 @@ class Main {
 	 */
 	public function init_translations(): void {
 		// Load translations
-		load_plugin_textdomain( 'posts_lifetime', false, dirname( BEAPI_POSTS_LIFETIME_PLUGIN_BASENAME ) . '/languages' );
+		load_plugin_textdomain( 'posts-lifetime', false, dirname( BEAPI_POSTS_LIFETIME_PLUGIN_BASENAME ) . '/languages' );
 	}
 }
