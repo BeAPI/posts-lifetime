@@ -129,13 +129,15 @@ class PostsLifetimeCron extends Cron {
 
 			if ( $author_email ) {
 				// Prepare email content
+				/* translators: %s: post title */
 				$subject = sprintf(
 					__( 'Your post "%s" has been moved to trash', 'posts-lifetime' ),
 					get_the_title( $post->ID )
 				);
 
+				/* translators: 1: post title, 2: number of days before permanent deletion, 3: post edit link */
 				$message = sprintf(
-					__( "Hello,\n\nYour post titled \"%s\" has been automatically moved to trash because its lifetime expired. It will be permanently deleted in %d days.\n\nYou can review and edit your post here: %s\n\nRegards,\nYour Site Team", 'posts_lifetime' ),
+					__( "Hello,\n\nYour post titled \"%s\" has been automatically moved to trash because its lifetime expired. It will be permanently deleted in %d days.\n\nYou can review and edit your post here: %s\n\nRegards,\nYour Site Team", 'posts-lifetime' ),
 					get_the_title( $post->ID ),
 					$retention_period,
 					esc_url( get_edit_post_link( $post->ID ) )

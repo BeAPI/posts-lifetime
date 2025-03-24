@@ -25,7 +25,7 @@ class Admin {
 	public function register_dashboard_widget(): void {
 		wp_add_dashboard_widget(
 			'beapi_posts_lifetime_widget',
-			__( 'Posts Lifetime Info', 'posts_lifetime' ),
+			__( 'Posts Lifetime Info', 'posts-lifetime' ),
 			[ $this, 'render_dashboard_widget' ]
 		);
 	}
@@ -40,11 +40,12 @@ class Admin {
 		$retention_period = get_option( 'trash_retention_period', 30 ); // 30 days default if not set
 		?>
         <div>
-            <h4><?php esc_html_e( 'Expired posts', 'posts_lifetime' ); ?></h4>
+            <h4><?php esc_html_e( 'Expired posts', 'posts-lifetime' ); ?></h4>
             <p>
 				<?php
+				/* translators: %d: number of days before permanent deletion */
 				printf(
-					esc_html__( 'Here are the last 10 expired posts, to be deleted within %d days after being in trash', 'posts_lifetime' ),
+					esc_html__( 'Here are the last 10 expired posts, to be deleted within %d days after being in trash', 'posts-lifetime' ),
 					$retention_period
 				);
 				?>
@@ -69,7 +70,7 @@ class Admin {
                         </li>
 					<?php endforeach; ?>
 				<?php else : ?>
-                    <li><?php esc_html_e( 'No expired posts.', 'posts_lifetime' ); ?></li>
+                    <li><?php esc_html_e( 'No expired posts.', 'posts-lifetime' ); ?></li>
 				<?php endif; ?>
             </ul>
         </div>
@@ -84,7 +85,7 @@ class Admin {
 	public function add_post_lifetime_metabox(): void {
 		add_meta_box(
 			'pl_post_lifetime_metabox',
-			__( 'Post Lifetime', 'posts_lifetime' ),
+			__( 'Post Lifetime', 'posts-lifetime' ),
 			[ $this, 'render_post_lifetime_metabox' ],
 		);
 	}
@@ -102,7 +103,7 @@ class Admin {
 		?>
         <p>
             <label for="pl_post_lifetime">
-				<?php _e( 'Define the post expiration date:', 'posts_lifetime' ); ?>
+				<?php _e( 'Define the post expiration date:', 'posts-lifetime' ); ?>
             </label>
         </p>
         <p>
@@ -159,7 +160,7 @@ class Admin {
 
 		add_settings_field(
 			'trash_retention_period',
-			__( 'Trash retention period (days) for posts', 'posts_lifetime' ),
+			__( 'Trash retention period (days) for posts', 'posts-lifetime' ),
 			function () {
 				$value = get_option( 'trash_retention_period', 30 );
 				echo '<input type="number" name="trash_retention_period" value="' . esc_attr( $value ) . '" class="small-text" min="1">';
