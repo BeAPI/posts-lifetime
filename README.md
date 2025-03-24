@@ -27,6 +27,9 @@ This plugin is only maintained, which means we do not guarantee some free suppor
 If you really like what we do or want to thank us for our quick work, feel free to [donate](https://www.paypal.me/BeAPI) as much as you want / can, even 1€ is a great gift for buying coffee :)
 
 ## Changelog
+### 1.0.1
+* Fix: translations loading (fix textdomain declaration and .pot/.mo/.po files)
+* Translation: add fr_FR translation
 
 ### 1.0.0
 * First release
